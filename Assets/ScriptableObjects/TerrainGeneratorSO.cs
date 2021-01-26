@@ -33,4 +33,6 @@ public class TerrainGeneratorSO : ScriptableObject
         _terrainGenerator.GenerateIndices();
     }
 
+
+
 }

@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50cdcdab6268f8f4eadcb47ad2a4ba7f, type: 3}
   m_Name: TerrainData
   m_EditorClassIdentifier: 
-  width: 20
-  height: 20
-  heightMap: 1.61
+  width: 5
+  height: 5
+  heightMap: 0

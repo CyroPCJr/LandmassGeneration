@@ -1,8 +1,9 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace Terrain
 {
-
+    [Serializable]
     public class TerrainGenerator
     {
         public int Width { get; set; }
@@ -10,6 +11,7 @@ namespace Terrain
 
         public float HeightMap { get; set; } = 0.0f;
 
+        [Serializable]
         public struct TerrainMesh
         {
             public Vector3[] vertices;
@@ -25,8 +27,8 @@ namespace Terrain
             {
                 for (int x = 0; x <= Width; ++x) // columns
                 {
-                    TerrainMeshes.vertices[i++] = new Vector3(x, HeightMap, z);
-                    //TerrainMeshes.vertices[i++] = new Vector3(x, Random.Range(0.0f, HeightMap), z);
+                    //TerrainMeshes.vertices[i++] = new Vector3(x, HeightMap, z);
+                    TerrainMeshes.vertices[i++] = new Vector3(x, UnityEngine.Random.Range(0.0f, HeightMap), z);
                 }
             }
         }
