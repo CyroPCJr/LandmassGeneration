@@ -3,7 +3,6 @@ using UnityEngine;
 
 namespace Terrain
 {
-    [Serializable]
     public class TerrainGenerator
     {
         public int Width { get; set; }
@@ -11,7 +10,6 @@ namespace Terrain
 
         public float HeightMap { get; set; } = 0.0f;
 
-        [Serializable]
         public struct TerrainMesh
         {
             public Vector3[] vertices;

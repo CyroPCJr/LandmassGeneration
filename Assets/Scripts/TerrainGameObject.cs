@@ -41,13 +41,6 @@ public class TerrainGameObject : MonoBehaviour
         _mesh.RecalculateNormals();
     }
 
-    [ContextMenu("ChangeHeightMap")]
-    public void ChangeHeightMap()
-    {
-        _terrainData.SetHeightMap();
-        _terrainData.GenerateShape();
-    }
-
     // Use for test before using custom Editor
     //private void OnDrawGizmos()
     //{

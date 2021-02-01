@@ -29,6 +29,7 @@ public class TerrainGeneratorSO : ScriptableObject
     {
         _terrainGenerator.Width = width;
         _terrainGenerator.Height = height;
+        SetHeightMap();
         _terrainGenerator.GenerateVertices();
         _terrainGenerator.GenerateIndices();
     }
