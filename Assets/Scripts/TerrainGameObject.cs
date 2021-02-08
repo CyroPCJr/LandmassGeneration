@@ -1,5 +1,4 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class TerrainGameObject : MonoBehaviour
 {
@@ -37,22 +36,9 @@ public class TerrainGameObject : MonoBehaviour
         _mesh.Clear();
         _mesh.vertices = _terrainData.GeTerrainMesh.vertices;
         _mesh.triangles = _terrainData.GeTerrainMesh.indicesVertices;
+        _mesh.colors = _terrainData.GeTerrainMesh.colors;
         _mesh.Optimize();
         _mesh.RecalculateNormals();
     }
-
-    // Use for test before using custom Editor
-    //private void OnDrawGizmos()
-    //{
-    //    _terrainData.GenerateShape();
-    //    if (_terrainData.GeTerrainMesh.vertices == null) return;
-
-    //    Vector3[] vertices = _terrainData.GeTerrainMesh.vertices;
-
-    //    for (int x = 0; x < vertices.Length; x++)
-    //    {
-    //        Gizmos.DrawSphere(vertices[x], 0.1f);
-    //    }
-    //}
 
 }

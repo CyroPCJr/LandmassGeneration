@@ -12,6 +12,42 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50cdcdab6268f8f4eadcb47ad2a4ba7f, type: 3}
   m_Name: TerrainData
   m_EditorClassIdentifier: 
-  width: 5
-  height: 5
-  heightMap: 0
+  width: 255
+  height: 255
+  heightMap: 8.2
+  scale: 4
+  amplitude_1: 22.9
+  amplitude_2: 3.6
+  amplitude_3: 6.3
+  frenquency_1: 5.9
+  frenquency_2: 14.6
+  frenquency_3: 2.5
+  gradientColor:
+    serializedVersion: 2
+    key0: {r: 0.08597365, g: 0.43927163, b: 0.8679245, a: 1}
+    key1: {r: 0.10280534, g: 0.49056602, b: 0.071733706, a: 1}
+    key2: {r: 0.37529966, g: 0.4056604, b: 0.373131, a: 1}
+    key3: {r: 1, g: 1, b: 1, a: 0}
+    key4: {r: 1, g: 1, b: 1, a: 0}
+    key5: {r: 1, g: 1, b: 1, a: 0}
+    key6: {r: 0, g: 0, b: 0, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 4819
+    ctime1: 16384
+    ctime2: 40670
+    ctime3: 65535
+    ctime4: 65535
+    ctime5: 65535
+    ctime6: 0
+    ctime7: 0
+    atime0: 0
+    atime1: 65535
+    atime2: 65535
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 0
+    m_NumColorKeys: 4
+    m_NumAlphaKeys: 2
