@@ -30,7 +30,7 @@ public class TerrainEditor : Editor
         _terrainData.width = (int)EditorGUILayout.Slider("Width", _terrainData.width, 1f, 255.0f);
         _terrainData.height = (int)EditorGUILayout.Slider("Height", _terrainData.height, 1f, 255.0f);
         _terrainData.heightMap = EditorGUILayout.Slider("Height map", _terrainData.heightMap, 1f, 50.0f);
-        _terrainData.scale = EditorGUILayout.Slider("Scale Perlin Noise Strength", _terrainData.scale, 0f, 50.0f);
+        _terrainData.scale = EditorGUILayout.Slider("Scale Noise Strength", _terrainData.scale, 0f, 255.0f);
 
         GUILayout.Space(10.0f);
 
@@ -41,7 +41,6 @@ public class TerrainEditor : Editor
         _terrainData.frenquency_1 = EditorGUILayout.Slider("Frequency 1", _terrainData.frenquency_1, 1f, 50.0f);
         _terrainData.frenquency_2 = EditorGUILayout.Slider("Frequency 2", _terrainData.frenquency_2, 1f, 50.0f);
         _terrainData.frenquency_3 = EditorGUILayout.Slider("Frequency 3", _terrainData.frenquency_3, 1f, 50.0f);
-
 
         if (GUILayout.Button("Generate Terrain"))
         {

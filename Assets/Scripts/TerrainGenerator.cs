@@ -39,6 +39,8 @@ namespace Terrain
             {
                 for (int x = 0; x <= Width; ++x) // columns
                 {
+                    //float NoisePosY = Mathf.PerlinNoise((float)x/Width, (float)z/Height) * 2.0f -1.0f;
+                    //TerrainMeshes.vertices[i++] = new Vector3(x, NoisePosY * Scale, z);
                     TerrainMeshes.vertices[i++] = new Vector3(x, Noise(x, z), z);
                 }
             }
