@@ -1,57 +1,72 @@
-﻿using Terrain;
+﻿using LandMassGeneration;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "TerrainData", menuName = "Terrain/Terrain")]
 public class TerrainGeneratorSO : ScriptableObject
 {
-    public int width = 1;
-    public int height = 1;
-    public float heightMap = 1.0f;
-    public float scale = 2.0f;
+    [SerializeField] private AnimationCurve _animationCurve;
+    [SerializeField] private TerrainTypes[] _terrainTypeList;
 
-    public float amplitude_1 = 0.0f;
-    public float amplitude_2 = 0.0f;
-    public float amplitude_3 = 0.0f;
-    public float frenquency_1 = 0.0f;
-    public float frenquency_2 = 0.0f;
-    public float frenquency_3 = 0.0f;
+    public LandMassGeneration.Noise.NoiseSettings noiseSettings;
+    public Color32[] ColorsTerrainHeight { get; private set; }
+    public TerrainMesh TerrainMesh { get; private set; }
 
-    public Gradient gradientColor;
+    private LandMassGeneration.Noise _terrainNoise;
+    public float heightMultiplier = 0f;
 
-    private TerrainGenerator _terrainGenerator = null;
     private void OnEnable()
     {
-        _terrainGenerator = new TerrainGenerator()
-        {
-            Width = width,
-            Height = height
-        };
-        _terrainGenerator.GenerateVertices();
+        _terrainNoise = new LandMassGeneration.Noise();
     }
-    public TerrainGenerator.TerrainMesh GeTerrainMesh => _terrainGenerator.TerrainMeshes;
 
-    public void SetHeightMap() => _terrainGenerator.HeightMap = heightMap;
 
-    public void GenerateShape()
+    public void Generate()
     {
-        _terrainGenerator.Width = width;
-        _terrainGenerator.Height = height;
-        _terrainGenerator.Scale = scale;
+        float[,] noiseTerrain = _terrainNoise.GenNoise(noiseSettings);
+        TerrainMesh = new TerrainMesh(noiseSettings.width, noiseSettings.height);
+        ColorTerrainTypes(noiseTerrain);
 
-        _terrainGenerator.Amplitude_1 = amplitude_1;
-        _terrainGenerator.Amplitude_2 = amplitude_2;
-        _terrainGenerator.Amplitude_3 = amplitude_3;
-        
-        _terrainGenerator.Frequency_1 = frenquency_1;
-        _terrainGenerator.Frequency_2 = frenquency_2;
-        _terrainGenerator.Frequency_3 = frenquency_3;
+        TerrainMesh.GenTerrain(noiseTerrain, heightMultiplier, _animationCurve);
 
-        SetHeightMap();
-        _terrainGenerator.GenerateVertices();
-        _terrainGenerator.GenerateColors(ref gradientColor);
-        _terrainGenerator.GenerateIndices();
+        //_terrainMesh.GenTerrain(noiseTerrain, heightMultiplier, _animationCurve);
+
+        // Old
+        //_terrainGenerator.Width = width;
+        //_terrainGenerator.Height = height;
+        //_terrainGenerator.Scale = scale;
+
+        //_terrainGenerator.Amplitude_1 = amplitude_1;
+        //_terrainGenerator.Amplitude_2 = amplitude_2;
+        //_terrainGenerator.Amplitude_3 = amplitude_3;
+
+        //_terrainGenerator.Frequency_1 = frenquency_1;
+        //_terrainGenerator.Frequency_2 = frenquency_2;
+        //_terrainGenerator.Frequency_3 = frenquency_3;
+
+        //// Old
+        //_terrainGenerator.GenerateVertices(noiseTerrain);
+        ////_terrainGenerator.GenerateColors(ref gradientColor);
+        //_terrainGenerator.GenerateIndices();
     }
 
-
+    private void ColorTerrainTypes(float[,] noiseTerrain)
+    {
+        ColorsTerrainHeight = new Color32[noiseSettings.width * noiseSettings.height];
+        for (int y = 0; y < noiseSettings.height; ++y)
+        {
+            for (int x = 0; x < noiseSettings.width; ++x)
+            {
+                float currentHeightNoise = noiseTerrain[x, y];
+                foreach (TerrainTypes terrain in _terrainTypeList)
+                {
+                    if (currentHeightNoise <= terrain.Height)
+                    {
+                        ColorsTerrainHeight[(y * noiseSettings.width) + x] = terrain.Color;
+                        break;
+                    }
+                }
+            }
+        }
+    }
 
 }
