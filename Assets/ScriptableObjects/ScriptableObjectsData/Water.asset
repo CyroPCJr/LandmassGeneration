@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Water
   m_EditorClassIdentifier: 
   Name: Water
-  Height: 0.4
+  Height: 0.1
   Color:
     serializedVersion: 2
     rgba: 10430745

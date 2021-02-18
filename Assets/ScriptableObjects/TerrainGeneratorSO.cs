@@ -7,46 +7,34 @@ public class TerrainGeneratorSO : ScriptableObject
     [SerializeField] private AnimationCurve _animationCurve;
     [SerializeField] private TerrainTypes[] _terrainTypeList;
 
-    public LandMassGeneration.Noise.NoiseSettings noiseSettings;
+    public float heightMultiplier = 0f;
+    private Noise _terrainNoise;
+
+    public Noise.NoiseSettings noiseSettings;
     public Color32[] ColorsTerrainHeight { get; private set; }
     public TerrainMesh TerrainMesh { get; private set; }
+    public Texture2D TerrainTexture { get; private set; }
 
-    private LandMassGeneration.Noise _terrainNoise;
-    public float heightMultiplier = 0f;
+    public TerrainTypes[] TerrainTypes => _terrainTypeList;
+
+    public float MinHeight => heightMultiplier * _animationCurve.Evaluate(0);
+    public float MaxHeight => heightMultiplier * _animationCurve.Evaluate(1);
+
+
+    //public float MinHeight;
+    //public float MaxHeight;
 
     private void OnEnable()
     {
-        _terrainNoise = new LandMassGeneration.Noise();
+        _terrainNoise = new Noise();
     }
-
 
     public void Generate()
     {
         float[,] noiseTerrain = _terrainNoise.GenNoise(noiseSettings);
         TerrainMesh = new TerrainMesh(noiseSettings.width, noiseSettings.height);
-        ColorTerrainTypes(noiseTerrain);
-
         TerrainMesh.GenTerrain(noiseTerrain, heightMultiplier, _animationCurve);
-
-        //_terrainMesh.GenTerrain(noiseTerrain, heightMultiplier, _animationCurve);
-
-        // Old
-        //_terrainGenerator.Width = width;
-        //_terrainGenerator.Height = height;
-        //_terrainGenerator.Scale = scale;
-
-        //_terrainGenerator.Amplitude_1 = amplitude_1;
-        //_terrainGenerator.Amplitude_2 = amplitude_2;
-        //_terrainGenerator.Amplitude_3 = amplitude_3;
-
-        //_terrainGenerator.Frequency_1 = frenquency_1;
-        //_terrainGenerator.Frequency_2 = frenquency_2;
-        //_terrainGenerator.Frequency_3 = frenquency_3;
-
-        //// Old
-        //_terrainGenerator.GenerateVertices(noiseTerrain);
-        ////_terrainGenerator.GenerateColors(ref gradientColor);
-        //_terrainGenerator.GenerateIndices();
+        ColorTerrainTypes(noiseTerrain);
     }
 
     private void ColorTerrainTypes(float[,] noiseTerrain)
@@ -67,6 +55,15 @@ public class TerrainGeneratorSO : ScriptableObject
                 }
             }
         }
+
+        // create a new texture and set its pixel colors
+        TerrainTexture = new Texture2D(noiseSettings.width, noiseSettings.height)
+        {
+            filterMode = FilterMode.Bilinear,
+            wrapMode = TextureWrapMode.Clamp
+        };
+        TerrainTexture.SetPixels32(ColorsTerrainHeight);
+        TerrainTexture.Apply();
     }
 
 }

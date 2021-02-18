@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Land
   m_EditorClassIdentifier: 
   Name: Land
-  Height: 0.5
+  Height: 0.3
   Color:
     serializedVersion: 2
     rgba: 1539356

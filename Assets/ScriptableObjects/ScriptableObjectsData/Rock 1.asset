@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 38cd069c60debd3488ff3257b60ea251, type: 3}
-  m_Name: Grass Dark
+  m_Name: Rock 1
   m_EditorClassIdentifier: 
-  Name: Grass Dark
-  Height: 0.6
+  Name: Dark Grass
+  Height: 0.5
   Color:
     serializedVersion: 2
-    rgba: 16657
+    rgba: 3823426
