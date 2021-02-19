@@ -60,6 +60,8 @@ public class TerrainGameObject : MonoBehaviour
         mesh.RecalculateNormals();
     }
 
+    
+
     // just test
     //Continar com testes
     public void UpateMaterial(Material material)
@@ -68,13 +70,23 @@ public class TerrainGameObject : MonoBehaviour
         material.SetFloat("_maxHeight", _terrainData.MaxHeight);
 
         material.SetFloat("_waterHeight", _terrainData.TerrainTypes[0].Height * _terrainData.MaxHeight);
+        material.SetTexture("_waterTexture", _terrainData.TerrainTypes[0].Texuture);
+
         material.SetFloat("_sandHeight", _terrainData.TerrainTypes[1].Height * _terrainData.MaxHeight);
+        material.SetTexture("_sandTexture", _terrainData.TerrainTypes[1].Texuture);
 
-        material.SetFloat("_grassHeight", _terrainData.TerrainTypes[2].Height* _terrainData.MaxHeight);
-        material.SetFloat("_rock1Height", _terrainData.TerrainTypes[3].Height* _terrainData.MaxHeight);
+        material.SetFloat("_grassHeight", _terrainData.TerrainTypes[2].Height * _terrainData.MaxHeight);
+        material.SetTexture("_grassTexture", _terrainData.TerrainTypes[2].Texuture);
 
-        material.SetFloat("_rock2Height", _terrainData.TerrainTypes[4].Height *_terrainData.MaxHeight);
+        material.SetFloat("_rockHeight", _terrainData.TerrainTypes[3].Height * _terrainData.MaxHeight);
+        material.SetTexture("_rockTexture", _terrainData.TerrainTypes[3].Texuture);
+
+        material.SetFloat("_mountainHeight", _terrainData.TerrainTypes[4].Height * _terrainData.MaxHeight);
+        material.SetTexture("_mountainTexture", _terrainData.TerrainTypes[4].Texuture);
+
         material.SetFloat("_snowHeight", _terrainData.TerrainTypes[5].Height * _terrainData.MaxHeight);
+        material.SetTexture("_snowTexture", _terrainData.TerrainTypes[5].Texuture);
+        
     }
 
 

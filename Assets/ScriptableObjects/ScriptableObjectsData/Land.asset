@@ -17,3 +17,4 @@ MonoBehaviour:
   Color:
     serializedVersion: 2
     rgba: 1539356
+  Texuture: {fileID: 2800000, guid: b6b2eda999a2d1c4bb3cf9bcbaf7bbc1, type: 3}

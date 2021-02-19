@@ -44,6 +44,30 @@ Material:
         m_Texture: {fileID: 2800000, guid: 710b706587d7974479a7467dc4bedf5b, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _grassTexture:
+        m_Texture: {fileID: 2800000, guid: b6b2eda999a2d1c4bb3cf9bcbaf7bbc1, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _mountainTexture:
+        m_Texture: {fileID: 2800000, guid: 4853243d2c00a3c43a99bdfb07d3907d, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _rockTexture:
+        m_Texture: {fileID: 2800000, guid: 710b706587d7974479a7467dc4bedf5b, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _sandTexture:
+        m_Texture: {fileID: 2800000, guid: 6ef094623bd992940afde590f91af7b3, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _snowTexture:
+        m_Texture: {fileID: 2800000, guid: 95a07756d2161ef469bd4128682dfdf8, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _waterTexture:
+        m_Texture: {fileID: 2800000, guid: 6f8fd70f09ba34942ad2b3c6f230cedc, type: 3}
+        m_Scale: {x: 20, y: 20}
+        m_Offset: {x: 0, y: 0}
     m_Floats:
     - Vector1_2A4BD599: 0
     - Vector1_2B4F5206: 0
@@ -56,8 +80,10 @@ Material:
     - _grassHeight: 4.5
     - _maxHeight: 15
     - _minHeight: 0.49301147
+    - _mountainHeight: 10.5
     - _rock1Height: 7.5
     - _rock2Height: 10.5
+    - _rockHeight: 7.5
     - _sandHeight: 3
     - _snowHeight: 15
     - _waterHeight: 1.5
