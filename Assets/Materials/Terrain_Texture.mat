@@ -79,7 +79,7 @@ Material:
     - Vector1_EF0D0B59: 0.9
     - _grassHeight: 4.5
     - _maxHeight: 15
-    - _minHeight: 0.49301147
+    - _minHeight: 0
     - _mountainHeight: 10.5
     - _rock1Height: 7.5
     - _rock2Height: 10.5
