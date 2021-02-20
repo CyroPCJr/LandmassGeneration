@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Mountain
   m_EditorClassIdentifier: 
   Name: Mountain
-  Height: 1
+  Height: 0.7
   Color:
     serializedVersion: 2
     rgba: 2894927
+  Texuture: {fileID: 2800000, guid: 4853243d2c00a3c43a99bdfb07d3907d, type: 3}

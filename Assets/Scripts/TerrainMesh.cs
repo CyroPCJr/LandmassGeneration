@@ -31,8 +31,9 @@ namespace LandMassGeneration
             {
                 for (int x = 0; x < width; ++x)
                 {
-                    vertices[vertexIndicies] = new Vector3(topLeftX + x, animationCurve.Evaluate(noiseTerrain[x, z]) * Mathf.Pow(heightMultiplier, 2), topLeftZ - z);
+                    vertices[vertexIndicies] = new Vector3(topLeftX + x, animationCurve.Evaluate(noiseTerrain[x, z]) * Mathf.Pow(heightMultiplier, 2f), topLeftZ - z);
                     uvs[vertexIndicies] = new Vector2(x / (float)width, z / (float)height);
+                    //uvs[vertexIndicies] = new Vector2(0, vertices[vertexIndicies].y);
 
                     if ((x < width - 1) && (z < height - 1))
                     {
@@ -44,15 +45,15 @@ namespace LandMassGeneration
                         // lb --- rb
                         int leftBotton = vertexIndicies + 0;        // left botton
                         int leftTop = vertexIndicies + width + 1;   // left top
-                        int rightBotton = leftBotton + 1;           // right botton
+                        int rightBotton = leftBotton + width;           // right botton
                         int rightTop = leftTop + 1;                 // right top
 
                         indices[tris + 0] = vertexIndicies;
-                        indices[tris + 1] = vertexIndicies  + width + 1;
+                        indices[tris + 1] = vertexIndicies + width + 1;
                         indices[tris + 2] = vertexIndicies + width;
                         indices[tris + 3] = vertexIndicies + width + 1;
                         indices[tris + 4] = vertexIndicies;
-                        indices[tris + 5] = vertexIndicies +1 ;
+                        indices[tris + 5] = vertexIndicies + 1;
                         tris += 6;
                     }
 
@@ -61,37 +62,6 @@ namespace LandMassGeneration
             }
         }
 
-        //private void GenerateIndices()
-        //{
-        //    for (int vertices = 0, tris = 0, z = 0; z < _surfaceSize - 1; ++z) // heigth
-        //    {
-        //        for (int x = 0; x < _surfaceSize - 1; ++x) // width
-        //        {
-        //            // lt --- rt
-        //            // | \    |
-        //            // |  \   |
-        //            // |   \  |
-        //            // lb --- rb
-        //            int leftBotton = vertices + 0;        // left botton
-        //            int leftTop = vertices + (_surfaceSize - 1) + 1;   // left top
-        //            int rightBotton = leftBotton + 1;     // right botton
-        //            int rightTop = leftTop + 1;           // right top
-
-        //            indices[tris + 0] = leftBotton;
-        //            indices[tris + 1] = leftTop;
-        //            indices[tris + 2] = rightBotton;
-        //            indices[tris + 3] = leftTop;
-        //            indices[tris + 4] = rightTop;
-        //            indices[tris + 5] = rightBotton;
-        //            vertices++;
-        //            tris += 6;
-        //        }
-        //        vertices++;
-        //    }
-        //}
-        
-
     }
 
 }
-

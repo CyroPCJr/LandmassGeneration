@@ -2,6 +2,15 @@
 
 namespace LandMassGeneration
 {
+
+    /// <summary>
+    /// Refactoring PerlinNoise fucntion call as Noise class, so that I can add more tunes variables to play around such, octaves, lacunarity, persistence, offset, seed,height multiplier, width and height.
+    /// As part as my research for better understand to use all this parameters, is to create more smooth noise transaction. For octaves represent how many layers noise 
+    /// I can add, lacunarity tune for each octaves change the frequency witch is the wavelenght in the timeline, persistence is the amplitude witch is the positive sign of the wavelenght.
+    /// Seeds is used for Random and give back a random number by a certain seed, so I can use different seed to give different result 
+    /// adding with offset to "move" aroung the mesh, but not exatcly the mesh itself but the perlin noise. 
+    /// Noise scale is just the proporcion scale for the mesh resolution calculate the proporicion of mesh width and height resolution.
+    /// </summary>
     public class Noise
     {
 
@@ -46,7 +55,7 @@ namespace LandMassGeneration
 
             float maxHeight = float.MinValue;
             float minHeight = float.MaxValue;
-            
+
             float halfWidth = noiseParams.width * 0.5f;
             float halfHeight = noiseParams.height * 0.5f;
 
