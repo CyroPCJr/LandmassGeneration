@@ -25,28 +25,10 @@ MonoBehaviour:
       inWeight: 0
       outWeight: 0
     - serializedVersion: 3
-      time: 0.09597711
-      value: 0.024612483
-      inSlope: -0.02053868
-      outSlope: -0.02053868
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.055342946
-    - serializedVersion: 3
-      time: 0.394662
-      value: 0.27092764
-      inSlope: 0.51894486
-      outSlope: 0.51894486
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.15023215
-      outWeight: 0.33333334
-    - serializedVersion: 3
       time: 1
       value: 1
-      inSlope: 0
-      outSlope: 0
+      inSlope: 2
+      outSlope: 2
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
@@ -61,13 +43,18 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 7b4f6c4c3c281164fb193d3c3648b08e, type: 2}
   - {fileID: 11400000, guid: c1e4fe88833e6f94e9254a7008918131, type: 2}
   - {fileID: 11400000, guid: d9c44c08d0bdae14eb7235aefb1fc7bc, type: 2}
-  heightMultiplier: 15
+  _objectsPlacementSO: {fileID: 11400000, guid: 3bfed7d24ab27dd4a8648d8e0b6e2776,
+    type: 2}
+  heightMultiplier: 12
   noiseSettings:
     offset: {x: 0, y: 0}
-    noiseScale: 30
-    persistence: 0.358
+    noiseScale: 50
+    persistence: 0.702
     lacunarity: 3
-    octaves: 8
-    seed: 2
-    width: 150
-    height: 150
+    octaves: 3
+    seed: 1
+    width: 100
+    height: 100
+  treePrefabs: {fileID: 1483114160548464, guid: a47d7ad739a48614babdcba6106ead5f,
+    type: 3}
+  PrefabsPosition: []

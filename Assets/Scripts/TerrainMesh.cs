@@ -31,7 +31,10 @@ namespace LandMassGeneration
             {
                 for (int x = 0; x < width; ++x)
                 {
-                    vertices[vertexIndicies] = new Vector3(topLeftX + x, animationCurve.Evaluate(noiseTerrain[x, z]) * Mathf.Pow(heightMultiplier, 2f), topLeftZ - z);
+                    // This using animation curve for better looking
+                    //vertices[vertexIndicies] = new Vector3(topLeftX + x, animationCurve.Evaluate(noiseTerrain[x, z]) * Mathf.Pow(heightMultiplier, 2f), topLeftZ - z);
+                    //This height is corret to export
+                    vertices[vertexIndicies] = new Vector3(topLeftX + x, noiseTerrain[x, z] * Mathf.Pow(heightMultiplier, 2f), topLeftZ - z);
                     uvs[vertexIndicies] = new Vector2(x / (float)width, z / (float)height);
                     //uvs[vertexIndicies] = new Vector2(0, vertices[vertexIndicies].y);
 
@@ -43,10 +46,10 @@ namespace LandMassGeneration
                         // |  \   |
                         // |   \  |
                         // lb --- rb
-                        int leftBotton = vertexIndicies + 0;        // left botton
-                        int leftTop = vertexIndicies + width + 1;   // left top
-                        int rightBotton = leftBotton + width;           // right botton
-                        int rightTop = leftTop + 1;                 // right top
+                        //int leftBotton = vertexIndicies + 0;        // left botton
+                        //int leftTop = vertexIndicies + width + 1;   // left top
+                        //int rightBotton = leftBotton + width;           // right botton
+                        //int rightTop = leftTop + 1;                 // right top
 
                         indices[tris + 0] = vertexIndicies;
                         indices[tris + 1] = vertexIndicies + width + 1;
