@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9125a144349d14544b5ff786d6a93bc7, type: 3}
+  m_Name: ObjectPlacement
+  m_EditorClassIdentifier: 
+  _amount: 1000
+  ElementsList:
+  - Name: Trees
+    density: 58
+    prefabs:
+    - {fileID: 1483114160548464, guid: a47d7ad739a48614babdcba6106ead5f, type: 3}
+    - {fileID: 1975661288262788, guid: 97fa5d2e177822c4084dda50fa0986c6, type: 3}
+    - {fileID: 1550143109349068, guid: 13f47203b7fe8ff479a289d12f2f47ed, type: 3}
+    - {fileID: 1323533898846632, guid: 07232b84fecc54e45b2e071b6885bb96, type: 3}
+  - Name: Grass
+    density: 100
+    prefabs:
+    - {fileID: 1028056091061516, guid: 28f60661728ddb148a424ba31b70ccc4, type: 3}
+    - {fileID: 1971823644936212, guid: e7943b8da41d75045a6bd919f15691ec, type: 3}
+    - {fileID: 1252722529230962, guid: 4b46a3851f431d14fb24389945dd98d7, type: 3}
+    - {fileID: 1950968817419594, guid: bca1934b3991fe648b8181db36dfcfcb, type: 3}

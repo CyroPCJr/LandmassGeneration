@@ -77,14 +77,14 @@ Material:
     - Vector1_CA42CF50: 1
     - Vector1_EE1B49EE: 1
     - Vector1_EF0D0B59: 0.9
-    - _grassHeight: 4.5
-    - _maxHeight: 15
+    - _grassHeight: 1.5
+    - _maxHeight: 5
     - _minHeight: 0
-    - _mountainHeight: 10.5
+    - _mountainHeight: 3.5
     - _rock1Height: 7.5
     - _rock2Height: 10.5
-    - _rockHeight: 7.5
-    - _sandHeight: 3
-    - _snowHeight: 15
-    - _waterHeight: 1.5
+    - _rockHeight: 2.5
+    - _sandHeight: 1
+    - _snowHeight: 5
+    - _waterHeight: 0.5
     m_Colors: []

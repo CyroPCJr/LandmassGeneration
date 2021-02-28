@@ -8,7 +8,6 @@ public class TerrainGameObject : MonoBehaviour
     private Mesh _mesh = null;
     private MeshRenderer _meshRenderer = null;
     private MeshFilter _meshFilter = null;
-
     public TerrainGeneratorSO TerrainSO => _terrainData;
 
     private void Awake()
@@ -26,6 +25,7 @@ public class TerrainGameObject : MonoBehaviour
         _terrainData.Generate();
         SetMeshTerrain(_mesh);
         SetTextureTerrain(_terrainData.TerrainTexture);
+
         UpateMaterial(_meshRenderer.sharedMaterial);
     }
 
@@ -60,11 +60,7 @@ public class TerrainGameObject : MonoBehaviour
         mesh.RecalculateNormals();
     }
 
-    
-
-    // just test
-    //Continar com testes
-    public void UpateMaterial(Material material)
+    private void UpateMaterial(Material material)
     {
         material.SetFloat("_minHeight", _terrainData.MinHeight);
         material.SetFloat("_maxHeight", _terrainData.MaxHeight);
@@ -86,8 +82,7 @@ public class TerrainGameObject : MonoBehaviour
 
         material.SetFloat("_snowHeight", _terrainData.TerrainTypes[5].Height * _terrainData.MaxHeight);
         material.SetTexture("_snowTexture", _terrainData.TerrainTypes[5].Texuture);
-        
-    }
 
+    }
 
 }
