@@ -45,16 +45,17 @@ MonoBehaviour:
   - {fileID: 11400000, guid: d9c44c08d0bdae14eb7235aefb1fc7bc, type: 2}
   _objectsPlacementSO: {fileID: 11400000, guid: 3bfed7d24ab27dd4a8648d8e0b6e2776,
     type: 2}
-  heightMultiplier: 12
+  heightMultiplier: 4
+  RandomTrees: 0
   noiseSettings:
     offset: {x: 0, y: 0}
-    noiseScale: 50
-    persistence: 0.702
+    noiseScale: 70
+    persistence: 0.5
     lacunarity: 3
     octaves: 3
     seed: 1
-    width: 100
-    height: 100
+    width: 255
+    height: 255
   treePrefabs: {fileID: 1483114160548464, guid: a47d7ad739a48614babdcba6106ead5f,
     type: 3}
   PrefabsPosition: []

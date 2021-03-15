@@ -5,7 +5,7 @@ using UnityEngine;
 public class TerrainEditor : Editor
 {
     private TerrainGameObject _terrainTarget = null;
-    private TerrainGeneratorSO _terrainData = null;
+    [HideInInspector, SerializeField] private TerrainGeneratorSO _terrainData = null;
     private void OnEnable()
     {
         _terrainTarget = target as TerrainGameObject;
@@ -51,10 +51,7 @@ public class TerrainEditor : Editor
         }
 
         serializedObject.ApplyModifiedProperties();
+        EditorUtility.SetDirty(_terrainData);
     }
 
-    private void OnSceneGUI()
-    {
-
-    }
 }

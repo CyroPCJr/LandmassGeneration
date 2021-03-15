@@ -127,7 +127,11 @@ public class TerrainGeneratorSO : ScriptableObject
         TerrainTexture.Apply();
     }
 
-
+    /// <summary>
+    /// Test for next features
+    /// </summary>
+    /// <param name="vertices"></param>
+    /// <param name="random"></param>
     private void BuildTreesTerrain(Vector3[] vertices, bool random)
     {
         PrefabsPosition.Clear();
