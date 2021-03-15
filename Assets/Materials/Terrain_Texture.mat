@@ -208,7 +208,7 @@ Material:
     - _rock2Height: 10.5
     - _rockHeight: 2
     - _sandHeight: 0.8
-    - _showReference: 1
+    - _showReference: 0
     - _snowHeight: 4
     - _waterHeight: 0.4
     m_Colors:
