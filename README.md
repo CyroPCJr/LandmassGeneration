@@ -14,3 +14,7 @@ I have also added support to export the generated result as a RAW heightmap. Thi
 > Export the landscape as raw file and png. Unity Terrain component is able to support to read and import this raw file and generate the heightmap.
 
 ![Alt Text](https://github.com/CyroPCJr/LandmassGeneration/blob/Sprint_5/Assets/Screenshots/capture4.JPG)
+
+## Acknowledgments
+- Richard Zampieri (My instructor)
+- @rsaz
