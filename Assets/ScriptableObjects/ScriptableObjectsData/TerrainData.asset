@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50cdcdab6268f8f4eadcb47ad2a4ba7f, type: 3}
+  m_Name: TerrainData
+  m_EditorClassIdentifier: 
+  _animationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  _terrainTypeList:
+  - {fileID: 11400000, guid: 18c7d531b8b19c9438f69ae5b064c8ef, type: 2}
+  - {fileID: 11400000, guid: 88e92f9a8a65e6840bab482b7298319b, type: 2}
+  - {fileID: 11400000, guid: 91fb8f272dba34c4691b8d0ddb8db113, type: 2}
+  - {fileID: 11400000, guid: 7b4f6c4c3c281164fb193d3c3648b08e, type: 2}
+  - {fileID: 11400000, guid: c1e4fe88833e6f94e9254a7008918131, type: 2}
+  - {fileID: 11400000, guid: d9c44c08d0bdae14eb7235aefb1fc7bc, type: 2}
+  _objectsPlacementSO: {fileID: 11400000, guid: 3bfed7d24ab27dd4a8648d8e0b6e2776,
+    type: 2}
+  heightMultiplier: 4
+  RandomTrees: 0
+  noiseSettings:
+    offset: {x: 0, y: 0}
+    noiseScale: 70
+    persistence: 0.5
+    lacunarity: 3
+    octaves: 3
+    seed: 1
+    width: 255
+    height: 255
+  treePrefabs: {fileID: 1483114160548464, guid: a47d7ad739a48614babdcba6106ead5f,
+    type: 3}
+  PrefabsPosition: []
