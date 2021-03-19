@@ -17,4 +17,3 @@ I have also added support to export the generated result as a RAW heightmap. Thi
 
 ## Acknowledgments
 - Richard Zampieri (My instructor)
-- @rsaz
