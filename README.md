@@ -16,4 +16,4 @@ I have also added support to export the generated result as a RAW heightmap. Thi
 ![Alt Text](https://github.com/CyroPCJr/LandmassGeneration/blob/Sprint_5/Assets/Screenshots/capture4.JPG)
 
 ## Acknowledgments
-- Richard Zampieri (My instructor)
+- [Richard Zampieri](https://github.com/rsaz) (My instructor)
