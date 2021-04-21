@@ -49,10 +49,10 @@ MonoBehaviour:
   RandomTrees: 0
   noiseSettings:
     offset: {x: 0, y: 0}
-    noiseScale: 70
+    noiseScale: 34.7
     persistence: 0.5
     lacunarity: 3
-    octaves: 3
+    octaves: 2
     seed: 1
     width: 255
     height: 255
